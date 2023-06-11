@@ -10,4 +10,4 @@ It comes in 3 versions:
 
 3. 3D intelligent instant recognition based on Mediapipe
 
-If you need to know the details of model training, you can pay attention to yz and learn from each other
+If you need to know the details of model training, you can ask me about anything [here](https://github.com/JayITH/JayITH/issues).
