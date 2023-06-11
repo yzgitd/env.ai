@@ -76,14 +76,14 @@ class MainWindow(QTabWidget):
 
         right_widget = QWidget()
         right_layout = QVBoxLayout()
-        btn_change = QPushButton(" upload ")
+        btn_change = QPushButton("上传图片")
         btn_change.clicked.connect(self.change_img)
         btn_change.setFont(font)
-        btn_predict = QPushButton(" ai ")
+        btn_predict = QPushButton("AI识别")
         btn_predict.setFont(font)
         btn_predict.clicked.connect(self.predict_img)
 
-        label_result = QLabel(' ai env sys ')
+        label_result = QLabel('人工智能环保系统')
         self.result = QLabel("")
         label_result.setFont(QFont('楷体', 16))
         self.result.setFont(QFont('楷体', 24))
