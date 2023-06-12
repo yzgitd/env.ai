@@ -42,10 +42,10 @@ names = ['其他垃圾_PE塑料袋', '其他垃圾_U型回形针', '其他垃圾
 class MainWindow(QTabWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowIcon(QIcon('images/main01.png'))
+        self.setWindowIcon(QIcon('../images/main01.png'))
         self.setWindowTitle('AI寻宝')
         # 加载训练结果模型
-        self.net = torch.load("models/mobilenet_trashv1_2.pt", map_location=lambda storage, loc: storage)
+        self.net = torch.load("../models/mobilenet_trashv1_2.pt", map_location=lambda storage, loc: storage)
         self.transform = transforms.Compose(
             # 这里只对其中的一个通道进行归一化的操作
             [transforms.Resize([224, 224]),
@@ -65,11 +65,11 @@ class MainWindow(QTabWidget):
         # img_title.setFont(font)
         # img_title.setAlignment(Qt.AlignCenter)
         self.img_label = QLabel()
-        self.predict_img_path = "images/main01.png"
+        self.predict_img_path = "../images/main01.png"
         img_init = cv2.imread(self.predict_img_path)
         img_init = cv2.resize(img_init, (500, 500))
-        cv2.imwrite('images/target.png', img_init)
-        self.img_label.setPixmap(QPixmap('images/target.png'))
+        cv2.imwrite('../images/target.png', img_init)
+        self.img_label.setPixmap(QPixmap('../images/target.png'))
         # left_layout.addWidget(img_title)
         left_layout.addWidget(self.img_label, 1, Qt.AlignCenter)
         left_widget.setLayout(left_layout)
@@ -104,7 +104,7 @@ class MainWindow(QTabWidget):
         about_title.setFont(QFont('楷体', 18))
         about_title.setAlignment(Qt.AlignCenter)
         about_img = QLabel()
-        about_img.setPixmap(QPixmap('images/target.png'))
+        about_img.setPixmap(QPixmap('../images/target.png'))
         about_img.setAlignment(Qt.AlignCenter)
         label_super = QLabel()
         label_super.setText("<a href='https://github.com/yz-jayhua'>AI寻宝</a>")
@@ -124,8 +124,8 @@ class MainWindow(QTabWidget):
         main_widget.setLayout(main_layout)
         self.addTab(main_widget, 'home')
         self.addTab(about_widget, 'about')
-        self.setTabIcon(0, QIcon('images/main.jpg'))
-        self.setTabIcon(1, QIcon('images/main.jpg'))
+        self.setTabIcon(0, QIcon('../images/main.jpg'))
+        self.setTabIcon(1, QIcon('../images/main.jpg'))
 
     def change_img(self):
         openfile_name = QFileDialog.getOpenFileName(self, 'select image', '', 'Image files(*.jpg , *.png, *.jpeg)')
@@ -137,8 +137,8 @@ class MainWindow(QTabWidget):
             self.predict_img_path = img_name
             img_init = cv2.imread(self.predict_img_path)
             img_init = cv2.resize(img_init, (400, 400))
-            cv2.imwrite('images/target.png', img_init)
-            self.img_label.setPixmap(QPixmap('images/target.png'))
+            cv2.imwrite('../images/target.png', img_init)
+            self.img_label.setPixmap(QPixmap('../images/target.png'))
 
     def predict_img(self):
         # 预测图片
