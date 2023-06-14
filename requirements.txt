@@ -1,0 +1,11 @@
+pip install pandas -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install requests  -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install tqdm -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install tensorflow==2.2.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install keras==2.2.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install opencv-python  -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install numpy matplotlib pillow wordcloud imageio jieba snownlp itchat -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install torch==1.7.0 torchvision==0.8.0 torchaudio==0.7.0 -f https://download.pytorch.org/whl/torch_stable.html
+pip install mediapipe opencv-python -i https://pypi.tuna.tsinghua.edu.cn/simple 
+pip install PyQt5 -i https://pypi.tuna.tsinghua.edu.cn/simple 
+pip install seaborn -i https://pypi.tuna.tsinghua.edu.cn/simple
