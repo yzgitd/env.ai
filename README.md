@@ -4,7 +4,7 @@ This is about environmentally relevant and out-of-the-box AI applications 🙌
 
 # Python Version:
 
-py3.7
+Python 3.7
 
 # It comes in 3 versions:
 

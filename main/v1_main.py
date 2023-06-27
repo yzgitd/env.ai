@@ -111,7 +111,6 @@ class MainWindow(QTabWidget):
         label_super.setFont(QFont('楷体', 12))
         label_super.setOpenExternalLinks(True)
         label_super.setAlignment(Qt.AlignRight)
-        # git_img = QMovie('images/')
         about_layout.addWidget(about_title)
         about_layout.addStretch()
         about_layout.addWidget(about_img)
