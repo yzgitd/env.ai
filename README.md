@@ -2,11 +2,11 @@
 
 This is about environmentally relevant and out-of-the-box AI applications 🙌
 
-# Python Version:
+# Python Version
 
 Python 3.7
 
-# It comes in 3 versions:
+# It comes in 3 versions
 
 1. Perform client interactive intelligent classification based on torch load model and PYQt5
 
